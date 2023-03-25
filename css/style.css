@@ -44,5 +44,359 @@ body .wrap #circle {
   transform-style: preserve-3d;
   animation: ani linear 40s infinite;
 }
+body .wrap #circle article {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  backface-visibility: hidden;
+}
+body .wrap #circle article h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  opacity: 0;
+  transition: 0.5s;
+}
+body .wrap #circle article:hover h1 {
+  top: -60px;
+  opacity: 1;
+}
+body .wrap #circle article .inner {
+  width: 100%;
+  height: 100%;
+}
+body .wrap #circle article .inner > div {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  opacity: 0.7;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  will-change: transform;
+}
+body .wrap #circle article .inner > div h2 {
+  transition: 0.5s;
+}
+body .wrap #circle article .inner > div i {
+  transition: 0.5s;
+}
+body .wrap #circle article .inner > div:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
+  opacity: 1;
+}
+body .wrap #circle article .inner > div:hover h2 {
+  color: lightcyan;
+  text-shadow: 0px 0px 10px aqua;
+}
+body .wrap #circle article.face1 .inner > div {
+  width: 290px;
+  height: 253.3333333333px;
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+body .wrap #circle article.face1 .inner > div:nth-of-type(even) {
+  margin-right: 0px;
+}
+body .wrap #circle article.face1 .inner > div p i {
+  font-size: 100px;
+}
+body .wrap #circle article.face1 .inner > div h2 {
+  margin-top: 20px;
+}
+body .wrap #circle article.face2 .inner > div {
+  width: 100%;
+  height: 100%;
+}
+body .wrap #circle article.face2 .inner > div img {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+body .wrap #circle article.face2 .inner > div h3 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+body .wrap #circle article.face2 .inner > div p {
+  font: 18px/1.3 "arial";
+  color: #ccc;
+}
+body .wrap #circle article.face3 .inner > div {
+  width: 100%;
+  height: 253.3333333333px;
+  margin-bottom: 20px;
+}
+body .wrap #circle article.face3 .inner > div .pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  float: left;
+  position: relative;
+  top: 6px;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+body .wrap #circle article.face3 .inner > div:nth-of-type(1) .pic {
+  background-image: url(../img/member1.jpg);
+}
+body .wrap #circle article.face3 .inner > div:nth-of-type(2) .pic {
+  background-image: url(../img/member2.jpg);
+}
+body .wrap #circle article.face3 .inner > div:nth-of-type(3) .pic {
+  background-image: url(../img/member3.jpg);
+}
+body .wrap #circle article.face3 .inner > div .con {
+  width: 340px;
+  float: right;
+}
+body .wrap #circle article.face3 .inner > div .con h2 {
+  color: #fff;
+}
+body .wrap #circle article.face3 .inner > div .con p {
+  font: 18px/1.3 "arial";
+  color: #ddd;
+  margin-top: 20px;
+}
+body .wrap #circle article.face3 .inner > div .con span {
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  font: 12px/1;
+  color: aqua;
+  opacity: 0.5;
+}
+body .wrap #circle article.face4 .inner > div:nth-of-type(1) {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 20px;
+}
+body .wrap #circle article.face4 .inner > div:nth-of-type(1) video {
+  width: 100%;
+  border: 1px solid #fff;
+  margin-bottom: 30px;
+}
+body .wrap #circle article.face4 .inner > div:nth-of-type(1) p {
+  font: 16px/1.3 "arial";
+  color: #bbb;
+  margin-top: 20px;
+}
+body .wrap #circle article.face4 .inner > div:nth-of-type(2) {
+  width: 100%;
+  height: 180px;
+}
+body .wrap #circle article.face4 .inner > div:nth-of-type(2) p {
+  float: left;
+}
+body .wrap #circle article.face4 .inner > div:nth-of-type(2) span {
+  float: right;
+  font-size: 12px;
+  color: #ccc;
+}
+body .wrap #circle article.face5 .inner > dic {
+  width: 100%;
+  height: 100%;
+}
+body .wrap #circle article.face5 .inner > dic img {
+  margin-bottom: 40px;
+}
+body .wrap #circle article.face5 .inner > dic .pic {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #bbb;
+  background: rgba(0, 0, 0, 0.3) url(../img/robot.png) no-repeat center/cover;
+  margin-bottom: 50px;
+  opacity: 0.7;
+}
+body .wrap #circle article.face5 .inner > dic .reflection {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  transition: 0.5s;
+}
+body .wrap #circle article.face5 .inner > dic:hover .reflection {
+  top: -40%;
+}
+body .wrap #circle article.face6 .inner > div {
+  width: 100%;
+  height: 185px;
+  margin-bottom: 20px;
+}
+body .wrap #circle article.face6 .inner > div i {
+  float: left;
+  width: 22%;
+  height: 100%;
+  font-size: 50px;
+  color: #fff;
+  border-right: 1px solid #bbb;
+  padding-left: 15px;
+  line-height: 83px;
+}
+body .wrap #circle article.face6 .inner > div .con {
+  float: right;
+  width: 75%;
+  height: 100%;
+  padding-left: 40px;
+}
+body .wrap #circle article.face6 .inner > div .con p {
+  font: 18px/1.2 "arial";
+  color: #999;
+  margin-top: 10px;
+}
+body .wrap #circle article.face7 .inner > div {
+  width: 100%;
+  height: 100%;
+}
+body .wrap #circle article.face7 .inner > div > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #aaa;
+}
+body .wrap #circle article.face7 .inner > div > div video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+body .wrap #circle article.face7 .inner > div > div h2 {
+  position: absolute;
+  top: 140px;
+  left: 50px;
+  z-index: 2;
+  font-size: 40px;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 2px 2px 5px #555;
+}
+body .wrap #circle article.face7 .inner > div > div img {
+  position: absolute;
+}
+body .wrap #circle article.face7 .inner > div > div img:nth-of-type(1) {
+  bottom: 0;
+  right: 0;
+}
+body .wrap #circle article.face7 .inner > div > div img:nth-of-type(2) {
+  width: 90%;
+  bottom: 85px;
+  right: -18px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(1) {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(1) i {
+  color: #fff;
+  font-size: 150px;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 80px;
+  left: 50px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(1) span {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 120px;
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(1) span em {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 60px;
+  position: absolute;
+  right: -20px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(2), body .wrap #circle article.face8 .inner > div:nth-of-type(3) {
+  width: 290px;
+  height: 380px;
+  float: left;
+  margin-right: 20px;
+  text-align: center;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(2) i, body .wrap #circle article.face8 .inner > div:nth-of-type(3) i {
+  font-size: 120px;
+  color: #fff;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(2) h3, body .wrap #circle article.face8 .inner > div:nth-of-type(3) h3 {
+  font: bold 20px/1;
+  margin-bottom: 15px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(2) p, body .wrap #circle article.face8 .inner > div:nth-of-type(3) p {
+  font: bold 16px/1 "arial";
+  color: #ccc;
+  margin-bottom: 20px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(2) h4, body .wrap #circle article.face8 .inner > div:nth-of-type(3) h4 {
+  font-size: 40px;
+  letter-spacing: 3px;
+  position: relative;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(2) h4 b, body .wrap #circle article.face8 .inner > div:nth-of-type(3) h4 b {
+  font-size: 24px;
+  color: #ddd;
+  position: absolute;
+  top: 0px;
+  right: 40px;
+}
+body .wrap #circle article.face8 .inner > div:nth-of-type(3) {
+  margin-right: 0px;
+}
+
+.face1 {
+  transform: rotateY(0deg) translateZ(-764px);
+}
+
+.face2 {
+  transform: rotateY(45deg) translateZ(-764px);
+}
+
+.face3 {
+  transform: rotateY(90deg) translateZ(-764px);
+}
+
+.face4 {
+  transform: rotateY(135deg) translateZ(-764px);
+}
+
+.face5 {
+  transform: rotateY(180deg) translateZ(-764px);
+}
+
+.face6 {
+  transform: rotateY(225deg) translateZ(-764px);
+}
+
+.face7 {
+  transform: rotateY(270deg) translateZ(-764px);
+}
+
+.face8 {
+  transform: rotateY(315deg) translateZ(-764px);
+}
+
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

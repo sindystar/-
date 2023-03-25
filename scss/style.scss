@@ -40,7 +40,396 @@ body {
       margin-left: -300px;
       transform-style: preserve-3d;
       animation: ani linear 40s infinite;
+      article {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        backface-visibility: hidden;
+        h1 {
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: 30px;
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:hover h1 {
+          top: -60px;
+          opacity: 1;
+        }
+        .inner {
+          width: 100%;
+          height: 100%;
+          > div {
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: rgba(255, 255, 255, 0.06);
+            opacity: 0.7;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.5s;
+
+            will-change: transform;
+            //안줘도 되며 사용자 설정에 따라서는 안주면 효과가 깨지거나 안보일수 있다 
+            //변화가 예상 되는 요소를 브라우저에게 미리 알려주어, 브라우저는 실제 요소가 변하기 전에 적절하게 최적화 할수 있게 그래픽 카드를 가속한다. 페이지의 반응성을 증가 시킬수 있지만 그래픽 카드의 점유율이라는 비용이 든다.
+            h2 {
+              transition: 0.5s;
+            }
+            i {
+              transition: 0.5s;
+            }
+            &:hover {
+              background: rgba(255, 255, 255, 0.15);
+              transform: scale(1.03);
+              opacity: 1;
+              h2 {
+                color: lightcyan;
+                text-shadow: 0px 0px 10px aqua;
+              }
+            }
+          }
+        }
+        &.face1 {
+          .inner {
+            > div {
+              width: 290px;
+              height: calc(760px / 3);
+              float: left;
+              margin-bottom: 20px;
+              margin-right: 20px;
+              text-align: center;
+
+              &:nth-of-type(even) {
+                margin-right: 0px;
+              }
+              p i {
+                font-size: 100px;
+              }
+              h2 {
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+        &.face2 {
+          .inner {
+            > div {
+              width: 100%;
+              height: 100%;
+              img {
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 40px;
+              }
+              h3 {
+                color: #fff;
+                margin-bottom: 20px;
+              }
+              p {
+                font: 18px/1.3 "arial";
+                color: #ccc;
+              }
+            }
+          }
+        }
+        &.face3 {
+          .inner {
+            > div {
+              width: 100%;
+              height: calc(760px / 3 );
+              margin-bottom: 20px;
+              .pic {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 1px solid #fff;
+                float: left;
+                position: relative;
+                top: 6px;
+                background-repeat: no-repeat;
+                background-position: center top;
+                background-size: cover;
+              }
+              &:nth-of-type(1) .pic {
+                background-image: url(../img/member1.jpg);
+              }
+              &:nth-of-type(2) .pic {
+                background-image: url(../img/member2.jpg);
+              }
+              &:nth-of-type(3) .pic {
+                background-image: url(../img/member3.jpg);
+              }
+              .con {
+                width: 340px;
+                float: right;
+                h2 {
+                  color: #fff;
+                }
+                p {
+                  font: 18px/1.3 "arial";
+                  color: #ddd;
+                  margin-top: 20px;
+                }
+                span {
+                  position: absolute;
+                  bottom: 20px;
+                  right: 50px;
+                  font: 12px/1;
+                  color: aqua;
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+        }
+        &.face4 {
+          .inner {
+            > div {
+              &:nth-of-type(1) {
+                width: 100%;
+                height: 600px;
+                margin-bottom: 20px;
+                video {
+                  width: 100%;
+                  border: 1px solid #fff;
+                  margin-bottom: 30px;
+                }
+                p {
+                  font: 16px/1.3 "arial";
+                  color: #bbb;
+                  margin-top: 20px;
+                }
+              }
+              &:nth-of-type(2) {
+                width: 100%;
+                height: 180px;
+                p {
+                  float: left;
+                }
+                span {
+                  float: right;
+                  font-size: 12px;
+                  color: #ccc;
+                }
+              }
+            }
+          }
+        }
+        &.face5 {
+          .inner {
+            > dic {
+              width: 100%;
+              height: 100%;
+              img {
+                margin-bottom: 40px;
+              }
+              .pic {
+                width: 100%;
+                height: 250px;
+                border: 1px solid #bbb;
+                background: rgba(0, 0, 0, 0.3) url(../img/robot.png) no-repeat center/cover;
+                margin-bottom: 50px;
+                opacity: 0.7;
+              }
+              .reflection {
+                position: absolute;
+                top: 100%;
+                right: 0%;
+                transition: 0.5s;
+              }
+              &:hover .reflection {
+                top: -40%;
+              }
+            }
+          }
+        }
+        &.face6 {
+          .inner {
+            > div {
+              width: 100%;
+              height: calc(740px / 4);
+              margin-bottom: 20px;
+              i {
+                float: left;
+                width: 22%;
+                height: 100%;
+                font-size: 50px;
+                color: #fff;
+                border-right: 1px solid #bbb;
+                padding-left: 15px;
+                line-height: 83px;
+              }
+              .con {
+                float: right;
+                width: 75%;
+                height: 100%;
+                padding-left: 40px;
+                p {
+                  font: 18px/1.2 "arial";
+                  color: #999;
+                  margin-top: 10px;
+                }
+              }
+            }
+          }
+        }
+        &.face7 {
+          .inner {
+            > div {
+              width: 100%;
+              height: 100%;
+              > div {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+                border: 1px solid #aaa;
+                video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.8;
+              }
+              h2 {
+                position: absolute;
+                top: 140px;
+                left: 50px;
+                z-index: 2;
+                font-size: 40px;
+                line-height: 1.1;
+                color: #fff;
+                text-shadow: 2px 2px 5px #555;
+              }
+              img {
+                position: absolute;
+                &:nth-of-type(1) {
+                  bottom: 0;
+                  right:0;
+                }
+                &:nth-of-type(2) {
+                  width: 90%;
+                  bottom: 85px;
+                  right: -18px;
+                }
+              }
+              }
+              
+              
+            }
+          }
+        }
+        &.face8 {
+          .inner {
+            > div {
+              &:nth-of-type(1) {
+                width: 100%;
+                height: 400px;
+                margin-bottom: 20px;
+                i {
+                  color: #fff;
+                  font-size: 150px;
+                  opacity: 0.9;
+                  position: absolute;
+                  bottom: 80px;
+                  left: 50px;
+                }
+                span {
+                  margin-left: 10px;
+                  font-weight: bold;
+                  font-size: 120px;
+                  position: absolute;
+                  bottom: 60px;
+                  right: 60px;
+                  em {
+                    font-weight: bold;
+                    font-style: normal;
+                    font-size: 60px;
+                    position: absolute;
+                    right: -20px;
+                  }
+                }
+              }
+              &:nth-of-type(2),
+              &:nth-of-type(3) {
+                width: 290px;
+                height: 380px;
+                float: left;
+                margin-right: 20px;
+                text-align: center;
+                i {
+                  font-size: 120px;
+                  color: #fff;
+                  opacity: 0.8;
+                  margin-bottom: 30px;
+                }
+                h3 {
+                  font: bold 20px/1;
+                  margin-bottom: 15px;
+                }
+                p {
+                  font: bold 16px/1 "arial";
+                  color: #ccc;
+                  margin-bottom: 20px;
+                }
+                h4 {
+                  font-size: 40px;
+                  letter-spacing: 3px;
+                  position: relative;
+                  b {
+                    font-size: 24px;
+                    color: #ddd;
+                    position: absolute;
+                    top: 0px;
+                    right: 40px;
+                  }
+                }
+              }
+              &:nth-of-type(3) {
+                margin-right: 0px;
+              }
+            }
+          }
+        }
+      }
     }
   }
+}
 
+.face1 {
+  transform: rotateY(0deg) translateZ(-764px);
+}
+.face2 {
+  transform: rotateY(45deg) translateZ(-764px);
+}
+.face3 {
+  transform: rotateY(90deg) translateZ(-764px);
+}
+.face4 {
+  transform: rotateY(135deg) translateZ(-764px);
+}
+.face5 {
+  transform: rotateY(180deg) translateZ(-764px);
+}
+.face6 {
+  transform: rotateY(225deg) translateZ(-764px);
+}
+.face7 {
+  transform: rotateY(270deg) translateZ(-764px);
+}
+.face8 {
+  transform: rotateY(315deg) translateZ(-764px);
+}
+
+@keyframes ani {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
